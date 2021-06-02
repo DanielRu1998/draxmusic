@@ -1,0 +1,338 @@
+@font-face{
+	font-family: CabinSketch-Bold;
+	src:url(CabinSketch-Bold.ttf);
+}
+@font-face{
+	font-family: FascinateInline-Regular;
+	src:url(FascinateInline-Regular.ttf);
+}
+body{
+  user-select: none;
+}
+/*Para el estilo del boton de reproduccion total en los modales*/
+#contenidoFiltrado i.left{
+	margin-right: 0px;
+}
+#contenidoFiltrado .modal .btn-floating{
+	width: auto;
+}
+/*Para el preloader del boton play pause*/
+#Controles_music .preloader-wrapper.big{
+	width: 50px;
+	height: 50px;
+}
+#Controles_music .spinner-blue-only{
+	border-color: #0097a7;
+}
+#Controles_music .circle-clipper .circle{
+	border-width: 6px;
+}
+/*Para el preloader general de filtrado*/
+.preloader {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  width: 70px;
+  height: 70px;
+  border: 10px solid #eee;
+  border-top: 10px solid #666;
+  border-radius: 50%;
+  animation-name: girar;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+@keyframes girar {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+/*Para el preloader a la hora de escribir en la barra de busqueda*/
+.lds-ellipsis {
+  position: relative;
+    top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  width: 80px;
+  height: 80px;
+}
+.lds-ellipsis div {
+  position: absolute;
+  top: 33px;
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background: #fff;
+  animation-timing-function: cubic-bezier(0, 1, 1, 0);
+}
+.lds-ellipsis div:nth-child(1) {
+  left: 8px;
+  animation: lds-ellipsis1 0.6s infinite;
+}
+.lds-ellipsis div:nth-child(2) {
+  left: 8px;
+  animation: lds-ellipsis2 0.6s infinite;
+}
+.lds-ellipsis div:nth-child(3) {
+  left: 32px;
+  animation: lds-ellipsis2 0.6s infinite;
+}
+.lds-ellipsis div:nth-child(4) {
+  left: 56px;
+  animation: lds-ellipsis3 0.6s infinite;
+}
+@keyframes lds-ellipsis1 {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes lds-ellipsis3 {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+@keyframes lds-ellipsis2 {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(24px, 0);
+  }
+}
+/*Para el nav*/
+nav{
+	background-color: #262626;
+	z-index: 1;/*Para encimar la barra de busqueda a la hora de filtrar*/
+}
+#la_busqueda{
+	background-color: #1d1d1d;
+}
+nav ul a{
+	font-size: 1.4em;
+}
+nav .brand-logo{
+	margin-bottom: 30px;
+}
+/*Modificando estilo de las ventanas modales*/
+.modal{
+	width: 97%;
+	max-height: 85%;
+}
+body::-webkit-scrollbar{
+	width: 6px;
+}
+body::-webkit-scrollbar-thumb{
+	background:#262626;
+	border-radius: 10px;
+}
+div::-webkit-scrollbar{/*Quitamos el scroll en los divs al abrir el album*/
+  width: 0px;
+}
+/*Creates table with scrollable tbody*/
+tbody {
+  display:block;
+  height:480px;
+  overflow:auto;
+}
+tbody::-webkit-scrollbar{
+	width: 7px;
+}
+tbody::-webkit-scrollbar-thumb{
+	background:rgba(255,255,255,.3);
+	border-radius: 10px;
+}
+thead, tbody tr {
+  display:table;
+  width:100%;
+  table-layout:fixed;
+}
+thead {
+  width: calc( 100% - 1em )
+}
+table {
+  width:100%;
+}
+tr{
+	border-bottom: 1px solid rgba(0,0,0,0.32);
+}
+/*tabla del filtrado*/
+#tabla_resultado td{
+	padding: 0px 5px 0px 5px;
+}
+/*Modificando los estilos del reloj de la temporzacion*/
+.timepicker-digital-display{
+	background-color: #0097a7;
+}
+.timepicker-close{
+	color: green;
+}
+.timepicker-footer{
+	padding-top: 0;
+}
+input:not([type]):focus:not([readonly]), input[type=text]:not(.browser-default):focus:not([readonly]), input[type=password]:not(.browser-default):focus:not([readonly]), input[type=email]:not(.browser-default):focus:not([readonly]), input[type=url]:not(.browser-default):focus:not([readonly]), input[type=time]:not(.browser-default):focus:not([readonly]), input[type=date]:not(.browser-default):focus:not([readonly]), input[type=datetime]:not(.browser-default):focus:not([readonly]), input[type=datetime-local]:not(.browser-default):focus:not([readonly]), input[type=tel]:not(.browser-default):focus:not([readonly]), input[type=number]:not(.browser-default):focus:not([readonly]), input[type=search]:not(.browser-default):focus:not([readonly]), textarea.materialize-textarea:focus:not([readonly]){
+	border-bottom: 1px solid #0097a7;
+	color:#0097a7;
+	font-size: 18px;
+}
+input:not([type]), input[type=text]:not(.browser-default), input[type=password]:not(.browser-default), input[type=email]:not(.browser-default), input[type=url]:not(.browser-default), input[type=time]:not(.browser-default), input[type=date]:not(.browser-default), input[type=datetime]:not(.browser-default), input[type=datetime-local]:not(.browser-default), input[type=tel]:not(.browser-default), input[type=number]:not(.browser-default), input[type=search]:not(.browser-default), textarea.materialize-textarea{
+	color: #0097a7;
+	font-size: 18px;
+}
+.timepicker-tick:hover { background: #0097a7 !important; }
+.timepicker-canvas line { stroke: #0097a7 !important; }
+.timepicker-canvas-bearing { fill: #0097a7 !important; }
+.timepicker-canvas-bg { fill: #0097a7 !important; }
+/*Modificando estilos del sidenav "Para vista celular"*/
+.sidenav{
+	background-color: #262626;
+}
+.sidenav li>a{
+	color: #fff;
+	font-size: 18px;
+}
+.sidenav li>a>i, .sidenav li>a>[class^="mdi-"], .sidenav li>a li>a>[class*="mdi-"], .sidenav li>a>i.material-icons{
+	color: #fff;
+}
+/*Modificando estilos de la barra de busqueda*/
+input:not([type]):focus:not([readonly]), input[type=text]:not(.browser-default):focus:not([readonly]), input[type=password]:not(.browser-default):focus:not([readonly]), input[type=email]:not(.browser-default):focus:not([readonly]), input[type=url]:not(.browser-default):focus:not([readonly]), input[type=time]:not(.browser-default):focus:not([readonly]), input[type=date]:not(.browser-default):focus:not([readonly]), input[type=datetime]:not(.browser-default):focus:not([readonly]), input[type=datetime-local]:not(.browser-default):focus:not([readonly]), input[type=tel]:not(.browser-default):focus:not([readonly]), input[type=number]:not(.browser-default):focus:not([readonly]), input[type=search]:not(.browser-default):focus:not([readonly]), textarea.materialize-textarea:focus:not([readonly]){
+	color: #1d1d1d;
+}
+.input-field input[type=search] ~ .mdi-navigation-close, .input-field input[type=search] ~ .material-icons{
+	color: #fff;
+	font-size: 2.3rem;
+	padding-top: 7px;
+}
+nav .input-field label i{
+	color: #fff;
+	padding-top: 7px;
+	font-size: 2.3rem;
+}
+.input-field input[type=search]:focus:not(.browser-default){
+	font-size: 30px;
+}
+.nav-wrapper .input-field input[type=search]{
+	font-size: 30px;
+	color: #fff;
+}
+#borra{
+	visibility: hidden;
+}
+/*Estilo de los parallax para seleccionar*/
+.parallax-container{
+	cursor: pointer; 
+}
+.parallax-container:hover{
+	background-color: rgba(0,0,0,0.3);
+	 transition: 0.5s;
+}
+/*Modificando estilos para el sidenav parte Albums*/
+#menus{
+	color: #1d1d1d;
+	font-size: 40px;
+}
+#menus .material-icons{
+	font-size: 40px;
+}
+/*Para la parte de la reproduccion de un audio*/
+#reproductor {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  margin: 0;
+  width: 100%;
+  background-color: #1d1d1d;
+  color: white;
+}
+#mve_ctls{/*Estilos para adecuar controles */
+	display: flex;
+	flex-wrap: nowrap;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+}
+#Controles_music a i{/*Estilos de los botones*/
+	color:#BFBFBF;
+	cursor: pointer;
+	margin-right: 25px;
+}
+#Controles_music #aleatoriedad i{/*Estilos de los botones*/
+	margin-left: 23px;
+}
+#Controles_music h6{
+	padding: 0;
+}
+input[type=range]{
+	border-radius: 5px 5px 5px 5px;
+}
+input[type=range]+.thumb{/*color de la burbuja del porcentaje de manejar audio y de pista "Range"*/
+	background-color: #0097a7;
+}
+/*color del circulo de audio y pista*/
+  input[type=range]::-webkit-slider-thumb {
+    background-color: #0097a7;
+  }
+  input[type=range]::-moz-range-thumb {
+    background-color: #0097a7;
+  }
+  input[type=range]::-ms-thumb {
+    background-color: #0097a7;
+  }
+p{/*Para quitar el margen del volumen y cancion innecesarios*/
+	margin: 0;
+}
+#Controles_music h6{
+	margin: 0;
+}
+/*Ocultamos la parte donde se cargan los datos de reproduccion*/
+#art{
+	display: none;
+}
+/*Estilos del UI*/
+.noUi-target{
+	background-color: white;
+	border: none;
+	border-radius: 10px 10px 10px 10px;
+	cursor: pointer;
+}
+.noUi-horizontal{
+	height: 15px;
+}
+.noUi-horizontal .noUi-handle{
+	width: 24px;
+	height: 24px;
+	border-radius: 10px 10px 10px 10px;
+	background-color: #0097a7;
+	cursor: grab;
+}
+.noUi-handle{
+	box-shadow: none;
+}
+.noUi-connect {
+	background-color: #0097a7;
+}
+.noUi-handle:before, .noUi-handle:after{
+	background:rgba(0,0,0,0.0);
+}
+.noUi-handle:before{
+	background:rgba(0,0,0,0.0);
+}
+.noUi-tooltip {
+    display: none;
+}
+.noUi-active .noUi-tooltip {
+    display: block;
+}

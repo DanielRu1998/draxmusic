@@ -1,0 +1,3 @@
+Plugging noUislider(Se utilizo como la barra de estado de la pista en reproduccion):
+
+https://refreshless.com/nouislider/events-callbacks/

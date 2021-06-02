@@ -1,0 +1,13 @@
+Pliggins para agregar estilos chingones:
+
+https://tympanus.net/codrops/category/playground/ (Plantillas para Usar)
+http://www.justinaguilar.com/animations/index.html#how(Utilizado para cargar los albums)
+
+Preloaders:
+
+https://loading.io/css/
+
+
+
+Para recortar los audios:
+recortar audio: https://mp3cut.net/es/
